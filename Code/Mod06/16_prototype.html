@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+  <script>
+
+    function Employee(empName, age) {      
+      this.empName = empName;
+      this.age = age;
+      this.getAge = function () {
+        return this.age;
+      };  
+    }
+    
+    var emp1 = new Employee("Mary", 30);
+    var emp2 = new Employee("Candy", 30);
+
+    
+    console.log(emp1.getAge == emp2.getAge); //false
+
+
+   
+  </script>
+</body>
+</html>

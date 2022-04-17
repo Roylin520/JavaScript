@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+</head>
+<body>
+  <a href="#bookmark">Go to bookmark</a>
+  <div id="bookmark">
+    this is bookmark
+  </div>
+  <script>
+    //http://localhost:4812/11_querystring.html?a=b&c=d#bookmark
+    var queryString = location.search.substring(1),
+       items = queryString.split("&"),
+       item = null,
+       len = items.length;
+
+    for (i = 0; i < len; i++) {
+      item = items[i].split("=");
+      console.log( decodeURIComponent( item[0]) + "," + decodeURIComponent([1]));
+      }
+
+      console.log(navigator.userAgent.includes("Chrome"));
+  </script>
+</body>
+</html>
+

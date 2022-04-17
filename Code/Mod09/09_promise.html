@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title> </title>
+  <meta charset = "utf-8" />
+</head>
+<body>
+  <div id = "list"> </div>
+  <script>
+    let requestPromise = new Promise( (resolve, reject) => {
+      let xhr = new XMLHttpRequest();
+      xhr.open( "GET", "employees.json" );
+      xhr.send();
+      xhr.onload = () => {
+        if ( xhr.status === 200 ) {
+          resolve( xhr.response );
+        } else {
+          reject( xhr.statusText );
+        }
+      };
+    });
+
+    requestPromise.then( data => {
+      let employees = JSON.parse( data );
+      let html = "";
+      employees.forEach( employee => {
+        html += `
+            <ul>
+                <li>
+                    ${employee.firstName} ${employee.lastName}
+                </li>
+            </ul>`;
+      });
+      document.getElementById( "list" ).innerHTML = html;
+    })
+    .catch(error => {
+      console.log( error );
+    });
+  </script>
+</body>
+</html>

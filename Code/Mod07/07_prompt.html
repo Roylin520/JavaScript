@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+</head>
+<body>
+  <input type="button" id="btn1" value="Click" />
+  <script>
+
+    document.getElementById("btn1").addEventListener("click", function () {
+      var day = prompt("輸入 1~7:", "7");
+      var msg = "今天是";
+      switch (day.toLowerCase()) {
+        case '1': msg += "星期一"; break;
+        case '2': msg += "星期2"; break;
+        case '3': msg += "星期3"; break;
+        case '4': msg += "星期4"; break;
+        case '5': msg += "星期5"; break;
+        case '6': msg += "星期6"; break;
+        case '7': msg += "星期天"; break;
+        default: msg = "輸入的資料超出範圍"; break;
+      };
+      alert(msg);
+     
+    }
+    );
+
+    
+  </script>
+</body>
+</html>

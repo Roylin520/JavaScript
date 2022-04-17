@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      //原始數據（primitive type）類型,表示獨一無二的值
+      var symbol1 = Symbol();
+      console.log(symbol1)
+
+      var symbol2 = Symbol("hello");
+      console.log(symbol2);
+
+      var symbol3 = Symbol("hello");
+      console.log(symbol3);
+
+
+      console.log(symbol2 == symbol3); // false
+    </script>
+  </body>
+</html>

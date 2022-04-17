@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+  <script>
+    var Employee = function (empName, age) {
+      this.empName = empName;
+      this.age = age;
+    }
+
+    Employee.prototype.getAge = function () {
+      return this.age;
+    }
+
+    var Sale = function (empName, age, bonus) {
+      //Inherits parent's properties
+      Employee.call(this, empName, age);      
+      this.bonus = bonus;
+    }
+
+    //Inherits methods
+    Sale.prototype = new Employee();
+    Sale.prototype.constructor = Sale;
+
+    var aSale = new Sale("Mary", 30, 1000);
+    console.log(aSale.empName); //Mary
+    console.log(aSale.age); //30    
+    console.log(aSale.bonus); //1000
+    console.log(aSale.getAge()); //30
+
+
+
+  </script>
+</body>
+</html>

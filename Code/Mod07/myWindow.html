@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+  <h1>this is my window</h1>
+
+  <input type="text" id="txt">
+
+  <input type="button" id="btn1" value="close" />
+  <script>
+    var win;
+    document.getElementById("btn1").addEventListener("click", function () {
+      top.opener.txt.value = txt.value
+      top.close()
+    })
+  </script>
+</body>
+</html>

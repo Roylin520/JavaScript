@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // var employee = {
+      //   id: 1,
+      //   empName: "mary",
+      // };
+      // var id = employee.id;
+      // var empName = employee.empName;
+      // console.log(id); // 1
+      // console.log(empName); // mary
+
+      // {
+      //   let employee = {
+      //     id: 1,
+      //     name: "mary",
+      //   };
+      //   let { id, name } = employee; // （A） 初始設定式initializer
+      //   console.log(id); // 1
+      //   console.log(name); // mary
+      // }
+
+      // {
+      //   let employee = {
+      //     id: 1,
+      //     name: "mary",
+      //   };
+      //   let  id, name 
+
+      //   ({ id, name } = employee);
+
+
+      //   console.log(id); // 1
+      //   console.log(name); // mary
+      // }
+
+
+          {
+        let employee = {
+          id: 1,
+          name: "mary",
+          
+        };
+        let { id : empId, name : empName} = employee; // （A） 初始設定式initializer
+        console.log(empId); // 1
+        console.log(empName); // mary
+      }
+
+      
+      {
+        let employee = {
+          id: 1,
+          name: "mary",
+          department: { deptName: "IT" },
+        };
+        let {  name : empName,...rest } = employee; // （A） 初始設定式initializer
+        console.log(empName); // mary
+        console.log(rest)
+      }
+
+
+      //Object. entries
+      let employee = {
+        id: 1,
+        name: "mary",
+      };
+      for (const [key, value] of Object.entries(employee)) {
+        console.log(` ${key} : ${value} `);
+      }
+
+      let o ={...employee}
+      console.log(o)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+// var r =(function aaa(str,str2) {
+//   console.log('aaa' + str + str2)
+//   return 'aaa' + str + str2
+// }('mary','candy'))
+
+// console.log(r)
+
+      x = 100;
+      (function () {
+        var x = 200;
+        alert("local x = " + x); //200
+      })();
+
+      alert("global x = " + x); //100
+
+      (function () {
+        let userName = "Mary";
+      })();
+      console.log(userName); // ReferenceError: userName is not defined
+    </script>
+  </body>
+</html>

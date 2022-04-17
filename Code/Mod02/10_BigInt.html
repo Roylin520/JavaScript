@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      {
+        const i = 9999999999999999n;
+        console.log(typeof i); // bigint
+        const i2 = BigInt(9999999999999999);
+        console.log(typeof i2); // bigint
+
+        //console.log(+i + 5)
+      }
+
+      {
+        const i = 9999999999999999n;
+      console.log( typeof  i ); // bigint
+      const j = Number(  i );
+      console.log( typeof j ) // number
+      console.log( j ) // 10000000000000000
+      }
+
+      {
+        console.log( 5n/2n)
+        console.log( 5/2)
+      }
+    </script>
+  </body>
+</html>

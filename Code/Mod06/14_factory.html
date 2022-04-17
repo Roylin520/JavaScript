@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+  <script>
+
+    function createEmployee(empName, age) {
+      var employee = new Object();
+      employee.empName = empName;
+      employee.age = age;
+      employee.getAge = function () {
+        return this.age;
+      };
+      return employee;
+    }
+    
+    var emp1 = createEmployee("Mary", 30);
+    var emp2 = createEmployee("Candy", 30);
+
+    console.log("Employee name : " + emp1.empName);
+    console.log("Employee age :" + emp1.age);
+    console.log("Employee age :" + emp1.getAge());
+
+
+    console.log("Employee name : " + emp2.empName);
+    console.log("Employee age :" + emp2.age);
+    console.log("Employee age :" + emp2.getAge());
+
+    console.log(typeof emp1)
+    console.log(typeof emp2)
+  </script>
+</body>
+</html>

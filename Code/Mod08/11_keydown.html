@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+
+</head>
+<body>
+  <input type="text" name="txt" id="txt" value="" />
+  <div id="result"></div>
+
+  <script>
+    var txt = document.getElementById("txt");
+
+    txt.addEventListener('keydown', function (event) {
+      var result = document.getElementById("result");
+      result.innerHTML = "You just enter : " + event.keyCode;
+      result.innerHTML += " <br/> CTRL : " + event.ctrlKey;
+      result.innerHTML += " <br/> ALT : " + event.altKey;
+      result.innerHTML += " <br/> SHIFT : " + event.shiftKey;
+    });
+  </script>
+</body>
+</html>

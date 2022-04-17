@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+  <script>
+    var x = 10;
+      var y = -90;
+
+    try {
+      if (y == 0) {
+        throw ("Divide by zero.");
+      } if (y < 0) {
+        throw "y must grater then zero.";
+      } else {
+        var r = x / y;
+      }
+    } catch (e) {
+      if (e == "Divide by zero.")
+      {
+        console.log("Error :" + e);
+      }
+      else
+      {
+        console.log("Error throw :" + e);
+        throw e;
+      }
+    }
+
+
+   
+
+    
+  </script>
+
+</body>
+</html>

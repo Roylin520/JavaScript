@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var s = new String("字串");
+      console.log(s.length); // 16
+      console.log("\u00A9")
+
+      //concat
+      var s = "Hello ".concat("JavaScript", "!!","QQQ");
+      console.log(s); // Hello JavaScript!!
+
+      //substring
+      var s = "Hello JavaScript";
+      console.log(s.substring(2, 3)); //l
+      console.log(s.substring(2)); //l
+
+      //substr
+      var s = "Hello JavaScript";
+      console.log(s.substr(2, 3)); //llo
+
+      //indexOf
+      var s = "Hello JavaScript.I love JavaScript.";
+      console.log(s.indexOf("JavaScript")); //6
+
+      //lastIndexOf
+      var s = "Hello JavaScript.I love JavaScript.";
+      console.log(s.lastIndexOf("JavaScript")); //24
+
+      //trim
+      var s = "     Hello JavaScript    ";
+      console.log("[" + s + "]"); //[     Hello JavaScript    ]
+      console.log("[" + s.trim() + "]"); //[Hello JavaScript]
+
+      //toLowerCase
+      var s = "Hello JavaScript";
+      console.log(s.toLowerCase()); //hello javascript
+
+      //toUpperCase
+      var s = "Hello JavaScript";
+      console.log(s.toUpperCase()); //HELLO JAVASCRIPT
+
+      //search
+      var s = "abCandyMary, Candy, Lilly, Judy";
+      var pos = s.search(/Mary|Candy/);
+      if (pos != -1) {
+        console.log(pos); //0
+      } else {
+        console.log("Not found!");
+      }
+
+      // padStart
+      console.log("[" + "abc".padStart(10) + "]");
+      console.log("[" + "World".padStart(10, "Hello") + "]");
+      console.log("[" + "World".padStart(10, "Hello123") + "]");
+
+      //padEnd
+      console.log("[" + "abc".padEnd(10) + "]");
+      console.log("[" + "World".padEnd(10, "Hello") + "]");
+      console.log("[" + "World".padEnd(10, "Hello123") + "]");
+    </script>
+  </body>
+</html>

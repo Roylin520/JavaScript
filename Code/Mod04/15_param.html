@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var print = function (getUserName) {
+        return function(){
+          return "Hello , " + getUserName();
+        };
+      };
+      var result = print(function () {
+        return "Mary";
+      });
+      console.log(result()); //Hello , Mary
+      console.log(result)
+    </script>
+  </body>
+</html>

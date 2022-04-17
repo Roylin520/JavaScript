@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+
+</head>
+<body>
+  <div id="div1">
+    <a id="a1" href="01_eventRegister.html">go to 01_eventRegister</a>
+  </div>
+
+  <script>
+    function divHandler(event) {
+      alert('divHandler');
+    }
+    function aHander(event) {   
+      alert('aHander');
+       event.preventDefault();
+       //event.stopPropagation();
+      //event.stopImmediatePropagation();
+    }
+    function aHander2(event) {
+      alert('aHander2');
+    }
+    var div1 = document.getElementById("div1");
+    div1.addEventListener("click", divHandler, true);
+
+    var a1 = document.getElementById("a1");
+    a1.addEventListener("click", aHander, true);
+    a1.addEventListener("click", aHander2, true);
+  </script>
+</body>
+</html>

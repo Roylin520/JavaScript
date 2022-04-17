@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+</head>
+<body>
+
+  <script>
+
+    function double(x) {
+      return x * 2;
+    }
+
+
+ 
+
+    function calc(functionName, arg) {
+      return functionName(arg);
+    }
+
+
+    var result = calc(double, 2);
+    console.log(result);
+
+    if  (false){
+      var tripple = function tripple(x) {
+        return x * 3;
+        }
+    }else{
+      var tripple = function tripple(x) {
+        return x * 3 * 3;
+        }
+    }
+    var result = calc(tripple, 2);
+    console.log(result);
+
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title></title>
+</head>
+
+<body>
+  <script>
+   // "use strict"
+    //var employee = {
+    //  empName: "Mary",
+    //  age: 29
+    //}
+
+    //writable
+    // var employee = {};
+    // Object.defineProperty(employee, "empName", {
+    //   writable: false,
+    //   value: "Mary",
+    // });
+    // console.log(employee.empName); //Mary
+    // employee.empName = "Candy";
+    // console.log(employee.empName); //Mary
+
+    // var employee = {};
+    // Object.defineProperty(employee, "empName", {
+    //   writable: true,
+    //   value: "Mary",
+    // });
+    // console.log(employee.empName); //Mary
+    // employee.empName = "Candy";
+    // console.log(employee.empName); //Candy
+
+    //configurable 
+    var employee = {};
+    Object.defineProperty(employee, "empName", {
+      enumerable: false,
+      writable: true,
+      configurable: false,
+      value: "Mary",
+    });
+    console.log(employee.empName); //Mary
+    delete employee.empName;
+    console.log(employee.empName); //Mary
+
+    for (const key in employee) {
+      console.log(key)
+    }
+      var employee = {};
+      Object.defineProperty(employee, "empName", {
+        configurable: true,
+        value: "Mary",
+      });
+      console.log(employee.empName); //Mary
+      delete employee.empName;
+      console.log(employee.empName); //undefined
+
+     // Object.getOwnPropertyDescriptors
+      var employee = {};
+      Object.defineProperties(employee, {
+        empName: {
+          configurable: true,
+          writable: true,
+          enumerable: false,
+          value: "Mary",
+        },
+        age: {
+          configurable: true,
+          value: "30",
+        },
+      });
+      var desc = Object.getOwnPropertyDescriptors(employee);
+      console.log(desc);
+  </script>
+</body>
+
+</html>

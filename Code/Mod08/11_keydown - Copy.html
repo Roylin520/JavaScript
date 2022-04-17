@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+
+</head>
+<body>
+  <input type="text" name="txt" id="txt" value="" />
+  <div id="result"></div>
+
+  <script>
+    var txt = document.getElementById("txt");
+
+    txt.addEventListener('keydown', function (event) {
+        console.log('keydown');
+    });
+         txt.addEventListener('keypress', function (event) {
+             console.log('keypress');
+    });
+         txt.addEventListener('keyup', function (event) {
+             console.log('keyup');
+    });
+
+
+  </script>
+</body>
+</html>

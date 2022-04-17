@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+</head>
+<body>
+
+  <script>
+   
+   let p = new Promise( function ( resolve, reject ) {
+  console.log( "promise" );
+  resolve();
+});
+
+p.then(
+  function () {
+    console.log( "resolve!" );
+  });
+
+
+  </script>
+</body>
+</html>

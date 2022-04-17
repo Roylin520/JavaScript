@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var count = 0;
+      outer: for (var i = 0; i < 10; i++) {
+        count++;
+        inner: for (var j = 0; j < 10; j++) {
+            if (i == 5 && j == 5) break inner;
+        }
+      }
+      console.log(count); // 6
+    </script>
+  </body>
+</html>

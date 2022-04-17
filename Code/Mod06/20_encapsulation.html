@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+        var Employee = function ( empName, age ) {
+        var _empName, _age = 0;
+        this.getName = function () {
+          return _empName;
+        }
+        this.setName = function ( empName ) {
+          _empName = empName;
+        }
+        this.getAge = function () {
+          return _age;
+        }
+        this.setAge = function ( age ) {
+          if ( age > 0 && age < 150 )
+            _age = age;
+        }
+        // 建構函式程式邏輯
+        _empName = empName;
+        this.setAge( age );
+      }
+
+      var emp1 = new Employee( "Mary", 20 );
+      console.log( emp1.getName() ); // Mary
+      console.log( emp1.getAge() ); // 20
+      emp1.setName( "Candy" );
+      emp1.setAge( 30 );
+      console.log( emp1.getName() ); //Candy
+
+      emp1.setAge(-100)
+      console.log( emp1.getAge() ); // 30
+      emp1._age = 555
+      console.log(emp1._age)
+      console.log(emp1)
+
+      
+    </script>
+  </body>
+</html>

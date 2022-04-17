@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+</head>
+
+<body>
+
+    <script>
+
+        //TypeError
+        //new eval()
+
+        //SyntaxError
+        //eval('a ++ b')
+
+        //ReferenceError
+        //var o =x
+
+        //ReferenceError
+        //aFunction();
+
+        //try {
+        //    aFunction();
+        //} catch {
+        //    console.log('some error');
+
+        //}
+
+        var start = Date.now()
+
+        var diff
+        try {
+
+            var x = 10;
+            var y = 0;
+
+            if (y == 0) {
+                throw ("Divide by zero.");
+            }
+
+            var i = 1,
+                total = 0;
+            for (; ;) {
+                total += i;
+                i++
+                if (i > 1000000) {
+                    break;
+                }
+            }
+            eval('a ++ b')
+            new eval()
+            aFunction();
+        } catch (e) {
+            if (e === 'Divide by zero.') {
+                console.log('Divide by zero...............');
+            }
+            console.log(e instanceof ReferenceError);
+            console.log(e instanceof SyntaxError);
+            console.log(e instanceof TypeError);
+            //console.log(e);
+            //console.log(e.message);
+            //console.log(e.name);
+            //console.log(e.stack);
+
+            if (e instanceof ReferenceError) {
+                console.log("ReferenceError..........");
+            } else if (e instanceof SyntaxError) {
+                console.log("SyntaxError..........");
+
+            }
+        }
+        finally {
+            console.log('finally');
+            diff = Date.now() - start
+            console.log(diff);
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

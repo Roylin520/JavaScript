@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+</head>
+<body>
+
+  <script>
+    var Employee = function () {
+      var _empName, _age;
+      Object.defineProperty( this, "empName", {
+        get: function () {
+          return _empName;
+        },
+        set: function ( newName ) {
+           _empName = newName;
+        }
+      });
+      Object.defineProperty( this, "age", {
+        get: function () {
+          return _age;
+        },
+        set: function ( newAge ) {
+          if ( newAge > 0 && newAge < 150 )
+             _age = newAge;
+        }
+      });
+    };
+  
+    var emp1 = new Employee();
+     emp1.empName = "Candy";
+    emp1.age = 30;
+    console.log( emp1.empName ); //Candy
+    console.log( emp1.age ); //30
+  </script>
+  
+</body>
+</html>
+

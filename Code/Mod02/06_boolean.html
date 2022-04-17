@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var married = true;
+
+      console.log(typeof married) //boolean型別
+      //  married = 123;
+      // console.log(typeof married)
+      console.log(married === 1); // false
+      console.log(married == 1); // true
+
+      var divorced = false;
+      console.log(divorced === 0); // false
+      console.log(divorced == 0); //true
+
+      console.log(Boolean(' '))//true
+      console.log(Boolean(''))//false
+      console.log(Boolean(-1))//true
+      console.log(Boolean(0))//false
+      console.log("a"/10)//NaN，表示無法比較
+      console.log(Boolean(NaN)) //false
+      console.log(Boolean({})) //true
+      console.log(Boolean(null)) //false
+      console.log(Boolean(undefined)) //false
+      console.log(true+1) //2
+      console.log(false+1) //1
+
+      console.log(true + '1') //true1
+      console.log(false + '1') //false1
+
+    </script>
+  </body>
+</html>

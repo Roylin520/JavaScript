@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      {
+        let s = "    Mary   ";
+        console.log("[" + s.trim() + "]"); // [Mary]
+        console.log("[" + s.trimLeft() + "]"); // [Mary   ]
+        console.log("[" + s.trimRight() + "]"); //[    Mary]
+      }
+
+      {
+        let s = "    Mary   ";
+        console.log("[" + s.trim() + "]"); // [Mary]
+        console.log("[" + s.trimStart() + "]"); // [Mary   ]
+        console.log("[" + s.trimEnd() + "]"); // [    Mary]
+      }
+      {
+        //includes
+        var s = "Hi mary";
+        var substring = "mary";
+        console.log(s.indexOf(substring) > -1);
+      }
+      {
+        let s = "Hi mary";
+        console.log(s.includes("mary"));
+      }
+
+      //startsWith
+      {
+        let s = "This is a book";
+        console.log(s.startsWith("This")); // true
+        console.log(s.endsWith("book")); // true
+      }
+
+      {
+        let s = "This is a book";
+        console.log(s.startsWith("is", 6)); // true
+        console.log(s.endsWith("is", 7)); // true
+      }
+      //repeat
+      {
+        let s = "x";
+        console.log(s.repeat(10)); // xxxxxxxxxx
+      }
+      {
+        let s = "Hi";
+        console.log(s.repeat(10)); // HiHiHiHiHiHiHiHiHiHi
+      }
+    </script>
+  </body>
+</html>

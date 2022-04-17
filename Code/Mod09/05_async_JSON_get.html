@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+</head>
+<body>
+  <input id="btnGet" type="button" value="GetData" />
+  <div id="div1">
+  </div>
+  <script>
+    var request = new XMLHttpRequest();
+    function dotheupdate() {
+      if (request.readyState == 4) {
+
+        var doc = request.responseText,
+         o = JSON.parse(doc),
+         d = o.d;
+
+        for (var i = 0; i < d.length; i++) {
+          document.getElementById("div1").innerHTML += d[i].name + "," + d[i].age + "<br/>";
+        }
+      }
+    }
+    function contentLoaded() {
+      var btnGet = document.getElementById("btnGet");
+      btnGet.addEventListener("click", function () {
+        request.addEventListener("readystatechange", dotheupdate, false);
+        request.open("GET", "SampleJSON.aspx", true);
+        request.send();
+      }, false);
+    }
+    window.addEventListener("DOMContentLoaded", contentLoaded, false);
+  </script>
+
+</body>
+</html>

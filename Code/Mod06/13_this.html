@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+  <script>
+     var empName = "Candy";
+     //console.log(window.empName)
+    //window.empName = "Candy";
+    var employee = { empName: "Mary" };
+
+    function getName(s,s2) {
+      return this.empName + s+s2;
+    }
+
+    //alert(window.getName()); //Candy
+    //alert(getName()); //Candy
+
+    employee.getEmployeeName = getName;    
+    //alert(employee.getEmployeeName()); //Mary
+
+  console.log( employee.getEmployeeName.call(window ,"aaaa","bbb"))
+  console.log( employee.getEmployeeName.call(employee,"aaaa","bbb"))
+
+  console.log( employee.getEmployeeName.apply(window,["aaaa","bbbb"]))
+  console.log( employee.getEmployeeName.apply(employee,["aaaa","bbb"]))
+
+
+  // console.log(getName.call(employee))
+  // console.log(getName.call(window))
+
+  </script>
+</body>
+</html>

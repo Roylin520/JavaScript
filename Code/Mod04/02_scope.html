@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      //以var宣告變數，屬全域變數(Global Scopes)
+      //以let宣告變數，屬區域變數(Block Scopes)
+      "use strict"; //嚴格模式
+      {
+        var userName = "Mary";
+        let possName= "Jack";
+        
+      }
+      console.log(userName); // Mary,全域變數
+      console.log(possName)  // ReferenceError，無法讀取，因為它是區域變數，只限{}程式內讀取。
+    </script>
+  </body>
+</html>

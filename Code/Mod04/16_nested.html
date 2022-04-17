@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+  <script>
+ 
+    
+    function parent() {
+      var x = 1;
+      function child() {
+        var y = 1;
+        console.log("x = " + x);
+      };
+      child();
+      console.log("y = " + y); //Error
+    };
+   parent();
+   //console.log("x = " + x); //Error
+   //child(); //Error
+
+  </script>  
+  
+</body>
+</html>

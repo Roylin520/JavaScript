@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title></title>
+</head>
+
+<body>
+  <script>
+
+    var n1 = 100; //定義整數
+    console.log(n1)
+
+    var n2 = 100.5;//定義浮點數
+    console.log(n2)
+
+    var n3 = .5;//定義浮點數
+    console.log(n3)
+
+    console.log(Number.MAX_VALUE) //1.7976931348623157e+30,e+30表示有30個零
+    console.log(Number.MAX_VALUE + 1 === Number.MAX_VALUE)//true,最大值怎麼加還是最大值
+
+    console.log("a" / 10) //NaN，無法運算
+    console.log(NaN == NaN) //false
+    console.log(NaN === NaN) //false
+
+    var n1 = isNaN(NaN);  //isNaN(變數)是不是number,回傳true
+    console.log(n1)
+
+    var billion = 1000000000
+    console.log(billion) //1000000000
+
+    var billion = 1e9 //e9表示有9個零
+    console.log(billion) //1000000000
+
+    var billion = 1_000_000_000 //加底線，好讀取，值也是1000000000
+    console.log(billion) //1000000000
+
+    var n1 = Number(true);
+    console.log(n1)//1
+
+
+    var n3 = Number('100');
+    console.log(n3) //100
+
+    var n4 = Number('100px'); //100px不是number
+    console.log(n4)//NaN
+
+    //數值型別轉換，將「非數值」型別轉換成「數值」型別，有三種
+    //第一種：Number涵式，可用在任何型別
+    //第二種：parseInt涵式，將字串轉型成「數值」型別
+    //第三種：parseFloat：將字串轉型成「符點數」型別
+    var n1 = parseInt("Mary"); // NaN, 裡面沒有數值
+    console.log(n1)
+    var n1 = parseInt("100px200"); // 100
+    console.log(n1);
+
+    // var n1 = parseFloat("Mary"); // NaN
+    // var n1 = parseFloat("100.2"); // 100.2
+
+
+
+
+    // var n1 = parseFloat("100.5");  // 100.5
+    // console.log(n1);
+
+    console.log(10 / 0)
+    console.log(-10 / 0)
+
+    console.log(typeof (+"1"))
+    console.log(typeof +"1")
+
+    var a = '1'
+    var b = '2'
+    console.log(a + b)
+    console.log(+a + +b)
+
+
+
+  </script>
+</body>
+
+</html>

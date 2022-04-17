@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+</head>
+<body>
+  <div id="div1"></div>
+  <script>
+    window.addEventListener('resize', function (event) {
+      var div1 = document.getElementById("div1");
+      div1.innerText = "innerWidth : " + window.innerWidth + " innerHeight : " + window.innerHeight;
+    });
+  </script>
+</body>
+</html>

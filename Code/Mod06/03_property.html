@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+  <script>
+    var employee = new Object();
+      employee.empName = "Mary";
+      employee.age = 29;
+
+      console.log("Employee name : " + employee.empName);
+      console.log("Employee age :" + employee.age);
+
+      employee["married"] = true;
+
+      console.log("Employee name : " + employee["empName"]);
+      console.log("Employee age :" + employee["age"]);
+      console.log("Is married :" + employee["married"]);
+
+      console.log(employee.hasOwnProperty("age"));
+      console.log(employee)
+      delete employee.age;
+      console.log(employee)
+      console.log(employee.hasOwnProperty("age"));
+
+      employee.age = 29;
+      console.log(employee)
+
+  </script>
+</body>
+</html>

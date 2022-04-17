@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+  
+
+
+</head>
+<body>
+    <input type="button" name="btn1" id="btn1" value="Click Me" />
+    <script>
+        var btn1 = document.getElementById("btn1");
+        btn1.onclick = function (event) {
+            alert(event.target.id + ",1111" + event.type);
+        };
+            btn1.onclick = function (event) {
+            alert(event.target.id + ",2222" + event.type);
+        };
+
+           //btn1.onclick = null;
+    </script>
+</body>
+</html>

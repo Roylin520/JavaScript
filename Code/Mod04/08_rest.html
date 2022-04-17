@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      //funition nums(...args)剩餘參數
+      function nums(first, second,...args) {
+        console.log(args)
+        console.log(typeof args)
+        console.log(Array.isArray(args))//Array.isArray()判定是否為陣列
+      
+        return arguments;
+      }
+
+      console.log(nums(1, 2, 3 , 4)); // { '0': 1, '1': 2, '2': 3 }
+      
+      function nums2(x,y){
+        return x*y
+      }
+      console.log(nums2(10,20))
+    </script>
+  </body>
+</html>

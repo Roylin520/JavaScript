@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+ 
+</head>
+<body>
+  <input type="button" name="btn1" value="Click Me" onclick="alert('Hello')" />
+  <input type="button" name="btn2" id="btn2" value="Click Me" onclick="alert(event.target.id + ',' + event.type)" />  
+  <input type="button" id="btn3" name="btn3" value="Click Me" onclick="btn_click(event)" />
+
+  <script>
+      function btn_click(event) { alert(event.target.id + ',' + event.type); }
+  </script>
+</body>
+</html>

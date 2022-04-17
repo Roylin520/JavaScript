@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+</head>
+
+<body>
+
+    <script>
+        //寫法一
+        var total2 = 0;
+        for (j = 1; j <= 100; j++) {
+            total2 += j;
+        }
+        console.log(total2);
+        console.log(j);
+
+        //寫法二
+        var i = 1,
+            total = 0;
+        for (; ;) {
+            total += i;
+            i++
+            if (i > 100) {
+                break;
+            }
+        }
+        console.log(total);
+        console.log(i);
+
+
+
+    </script>
+</body>
+
+</html>

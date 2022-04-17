@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+</head>
+<body>
+  <input id="btnGet" type="button" value="GetData" />
+  <div id="div1">
+
+  </div>
+  <script>
+    var request = new XMLHttpRequest();
+
+    
+
+    function contentLoaded() {
+      var btnGet = document.getElementById("btnGet");
+      btnGet.addEventListener("click", function () {
+          request.addEventListener("readystatechange", 
+              function () {
+                  console.log('readyState', request.readyState);
+                  if (request.readyState == 4) {
+                      document.getElementById("div1").innerHTML = request.responseText;
+                     
+                  }
+              }
+              , false);
+        request.open("GET", "Sample.aspx", true);
+          request.send();
+
+          console.log('finish');
+        //request.abort();
+      }, false);
+
+
+    }
+
+    window.addEventListener("DOMContentLoaded", contentLoaded, false);
+  </script>
+
+</body>
+</html>

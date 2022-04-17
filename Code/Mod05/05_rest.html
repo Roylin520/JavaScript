@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+    let employees = ["Mary", "Candy", "Lili", "Jane"];
+      let [s1="hello", ...others] = employees;
+      console.log(s1); // Mary
+      console.log(Array.isArray(others)); // true
+      console.log(others.length); // 3
+      console.log(others.toString()); // Candy,Lili,Jane
+      console.log(others)
+
+    // {
+
+    //   let employees = ["Mary", "Candy", "Lili", "Jane"];
+    //   let [s1, ...others] = employees;
+    //   console.log(s1); // Mary
+    //   console.log(Array.isArray(others)); // true
+    //   console.log(others.length); // 3
+    //   console.log(others.toString()); // Candy,Lili,Jane
+    // }
+    </script>
+  </body>
+</html>

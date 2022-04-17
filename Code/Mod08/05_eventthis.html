@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+</head>
+<body>
+  <div id="div1">
+    <input type="button" name="btn1" id="btn1" value="Click Me" />
+  </div>
+
+  <script>
+    var btn1 = document.getElementById("div1");
+    btn1.addEventListener("click", function (event) {
+      console.log("Event target id :" + event.target.id);
+      console.log("Event currentTarget id :" + event.currentTarget.id);
+      console.log("this id :" + this.id);
+    }, false);
+  </script>
+</body>
+</html>

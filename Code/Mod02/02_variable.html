@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+    //宣告區域變數(Local Variable)
+    //var 變數名稱 = 值
+    // "use strict"
+  
+    //eval('alert("hi")')
+      var myName = "Mary";
+      var greeting = "Hello";
+
+      var myName = true;
+
+    console.log(myName) //true
+    console.log(typeof myName) //Boolean 型別
+
+    myName = 100
+    console.log(typeof myName) //number型別
+    console.log(window.myName) //100
+
+    console.log(window.greeting) //Hello
+    console.log(typeof greeting) //string型別
+
+      var arguments = false;
+      var eval = false;
+
+      {
+        let x = 10;  //let用來宣告變數 ，所宣告的變數只在let 命令所在的程式碼塊{} 內有效。
+ 
+        console.log(x); // 10
+      }
+
+      {
+        const userName = "Mary"; //const用來宣告常數，唯一性，不可以改變
+     
+        console.log(userName); // Mary
+      }
+    </script>
+  </body>
+</html>

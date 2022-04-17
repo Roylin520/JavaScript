@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title></title>
+</head>
+
+<body>
+  <script>
+    //demo1
+    // {
+    //   let employee = {
+    //     id: 1,
+    //     name: "mary",
+    //     department: { deptName: "IT" },
+    //   };
+    //   console.log(employee.id); // 1
+    //   console.log(employee.name); // mary
+    //   console.log(employee.department.deptName); // IT
+    // }
+    //demo2
+    // {
+    //   let employee = {
+    //     id: 1,
+    //     name: "mary",
+    //     
+    //   };
+    //   console.log(employee.department)
+
+    //   if (typeof employee.department !== 'undefined') {
+
+    //     console.log(employee.department.deptName); // TypeError
+    //   } else {
+    //     console.log('error...');
+    //   }
+    // }
+
+    //demo3
+    // {
+    //   let employee = {
+    //     id: 1,
+    //     name: "mary",
+    //     department: { deptName: "IT" },
+    //   };
+    //   console.log(employee.id); // 1
+    //   console.log(employee.name); // mary
+    //   console.log(Boolean(employee.department))
+    //   console.log(employee.department && employee.department.deptName); // undefined
+    // }
+
+    //demo4
+    // {
+    //   let employee = {
+    //     id: 1,
+    //     name: "mary",
+    //   };
+    //   console.log(employee.id); // 1
+    //   console.log(employee.name); // mary
+    //   console.log(employee.department?.deptName); // undefined
+    // }
+
+    {
+
+      let key = "department"
+      let employee = {
+        id: 1,
+        name: "mary",
+      
+      };
+
+      employee[key]= { deptName: "IT" }
+
+
+      console.log(employee?.[key])
+      console.log(employee?.[key]?.deptName)
+
+      // console.log(employee.id); // 1
+      // console.log(employee.name); // mary
+      // console.log(employee[key].deptName); // undefined
+      // //console.log(employee.department?.deptName); // undefined
+      // console.log(employee)
+    }
+
+  </script>
+</body>
+
+</html>

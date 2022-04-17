@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>  DOM </title>
+</head>
+<body>
+  <a href="help.html">Get Help</a>
+  <form method="post" name="form1" id="form1">
+    <fieldset>
+      <legend>個人資料</legend>
+      <img src="images/melissa-kerr.jpg" /><br />
+      <label class="lbl txt" for="first-name">First name:</label><br />
+      <input type="text" id="first-name" name="FirstName" value="Mary" /><br />
+      <label class="lbl" for="last-name">Last name:</label><br />
+      <input type="text" id="last-name" name="LastName" value="Su" /><br />
+      <label class="lbl" for="email-address">Email address:</label><br />
+      <input type="email" id="email-address" name="EmailAddress" value="Mary@test.com" /><br />
+      <label class="lbl" for="password">Choose a password:</label><br />
+      <input type="password" id="password" name="Password" value="123" /><br />
+      <label class="lbl" for="confirm-password">Confirm your password:</label><br />
+      <input type="password" id="confirm-password" name="ConfirmPassword" value="123" /><br />
+      <label class="lbl" for="website">Website/blog:</label><br />
+      <input type="url" id="website" name="WebsiteUrl" value="http://mary.test.com" /><br />
+      <button type="submit">Register</button>
+    </fieldset>
+  </form>
+  <script>
+      for (var i = 0; i < document.forms.length; i++) {
+      console.log(document.forms[i].id);
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      async function fun() {
+        let promise = new Promise(function (resolve, reject) {
+          setTimeout(function () {
+            resolve(100);
+          }, 1000);
+        });
+        let result = await promise;
+        console.log(result); // 100
+      }
+      fun();
+    </script>
+  </body>
+</html>

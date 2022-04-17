@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+</head>
+<body>
+
+  <script>
+    function double(i) {
+        var x = i * 2;
+      return function () {
+        return x;
+      };
+    };
+    var calc = double(10);
+   console.log( calc());
+
+   var calc2 = double(20);
+   console.log( calc2());
+
+
+   console.dir(calc2);
+   console.dir(calc);
+
+  </script>
+</body>
+</html>

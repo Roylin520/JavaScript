@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+  <style>
+    #div1 {
+      border: 1px dashed blue;
+      width: 300px;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div id="div1"></div>
+  <div id="result"></div>
+  <script>
+    var div1 = document.getElementById("div1");
+    div1.addEventListener('mouseenter', function (event) {
+      var result = document.getElementById("result");
+      result.innerText = "Mouse Enter";
+    });
+
+    div1.addEventListener('mousemove', function (event) {
+      var result = document.getElementById("result");
+      result.innerHTML = "<b>X</b> : " + event.x + " Y : " + event.y;
+    });
+
+    div1.addEventListener('mouseleave', function (event) {
+      var result = document.getElementById("result");
+      result.innerText = "Mouse Leave";
+    });
+  </script>
+
+</body>
+</html>

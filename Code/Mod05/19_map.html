@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      let map = new Map();
+      map.set("id", 1);
+      map.set("name", "mary");
+      map.set(100, "mary123");
+
+      console.log(map.get("id")); // 1
+      console.log(map.get("name")); // "mary"
+      console.log(map.get(100)); // "mary"
+
+      console.log(map)
+    </script>
+  </body>
+</html>

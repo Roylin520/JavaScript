@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+</head>
+
+<body>
+
+    <script>
+        var now = new Date(),
+            hr = now.getHours();
+        console.log(now)
+
+        if (hr < 12)
+            console.log('早安');
+    
+
+        if (hr > 12 && hr < 16 ) {
+            console.log('午安');
+        }
+
+        if (hr > 18 ) {
+            console.log('晚安')
+        }
+
+        if (hr > 18) console.log('晚安');
+
+        if(hr > 18? console.log('晚安'):console.log('早安')); //三元運算式
+
+    </script>
+</body>
+
+</html>

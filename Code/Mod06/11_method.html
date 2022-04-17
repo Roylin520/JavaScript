@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+  <script>
+
+function getAge() {
+      return this.age;
+    };
+
+    var employee = {
+      empName: "Mary",
+      age: 29,
+      getAge
+    }
+    console.log("Employee name : " + employee.empName);
+    console.log("Employee age :" + employee.age);
+    console.log("Employee age :" + employee.getAge());
+
+  </script>
+</body>
+</html>

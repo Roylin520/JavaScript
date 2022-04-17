@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+
+</head>
+<body>
+  <input type="text" name="txt" id="txt" value="" />
+
+  <script>
+    var txt = document.getElementById("txt");
+    txt.addEventListener('input', function (event) {
+        this.value = this.value.toUpperCase()
+    });
+  </script>
+</body>
+</html>

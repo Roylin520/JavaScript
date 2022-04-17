@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title> </title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div id="list"></div>
+    <script>
+      async function getEmployeesAsync() {
+        let response = await fetch("employees.json");
+        if (response.ok) {
+          let employees = await response.json();
+          let html = "";
+          employees.forEach((employee) => {
+            html += `
+          <ul>
+              <li>
+                  ${employee.firstName} ${employee.lastName}
+              </li>
+          </ul>`;
+          });
+          document.getElementById("list").innerHTML = html;
+        }
+      }
+      getEmployeesAsync();
+    </script>
+  </body>
+</html>

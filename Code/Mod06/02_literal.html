@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var employee = {
+        empName: "Mary",
+        age: 29,
+      };
+
+      console.log("Employee name : " + employee.empName);
+      console.log("Employee age :" + employee.age);
+
+      //demo2
+      var employee = {
+        'empName': "Mary",
+        "age": 29,
+      };
+      console.log("Employee name : " + employee.empName);
+      console.log("Employee age :" + employee.age);
+
+      //demo3
+      var employee = {
+        'emp-Name': "Mary",
+        age: 29,
+      };
+
+      //demo4
+      // var employee = {};
+      // employee.empName = "Mary";
+      // employee.age = 29;
+
+      console.log("Employee name : " + employee["emp-Name"]);
+      console.log("Employee age :" + employee["age"]);
+      employee["email"]="aaa@aaa.com"
+      console.log(employee)
+    </script>
+  </body>
+</html>

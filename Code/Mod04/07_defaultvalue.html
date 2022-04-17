@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    
+    <script>
+      
+      var b
+      //  if(b){
+
+      //  }
+      //console.log(typeof (typeof b))
+      console.log(typeof b)
+      console.log(typeof b === "undefined")
+     // console.log(b===undefined)
+
+      function add(a, b) {
+        var b = typeof b !== "undefined" ? b : 1;
+        return a + b;
+      }
+      console.log(add(5)); // 6
+
+      // function add(a, b = 1) {
+      //   return a + b;
+      // }
+      // console.log(add(5)); // 6
+    </script>
+  </body>
+</html>

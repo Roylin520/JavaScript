@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+</head>
+<body>
+
+  <script>
+
+      console.log(JSON.stringify(1001));
+      console.log(JSON.stringify('aaa'));
+
+    var employee = {
+      "name": "Mary",
+        "age": undefined,
+        test: function () {
+
+        }
+    }   
+
+    var s1 = JSON.stringify(employee);
+    console.log(s1);
+
+    var aEmployee = JSON.parse(s1);
+    console.log(aEmployee.name);
+    console.log(aEmployee.age);
+
+
+
+    var employees =
+       [
+         { "name": "mary", "age": 25 },
+         { "name": "candy", "age": 50 },
+         { "name": "lilly", "age": 50 }
+       ]
+
+    var s2 = JSON.stringify(employees);
+    console.log(s2);
+
+    var allEmployees = JSON.parse(s2);
+
+    for (var i = 0; i < allEmployees.length; i++) {
+      console.log(allEmployees[i].name + "," + allEmployees[i].age);
+    }
+
+  </script>
+</body>
+</html>

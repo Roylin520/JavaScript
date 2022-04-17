@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var ar = ["Spring", "Summer", "Autumn", "Winter"];
+      var a = a[0]
+      var b = a[1]
+      var c = a[2]
+      console.log(ar[0]);
+      ar[0] = "春天";
+      console.log(ar[0]);
+      console.log(ar.length); //4
+
+      ar[998] = 100
+      console.log(ar)
+      console.log(ar.length)
+
+      console.log(ar[4]); // undefined
+      console.log(ar[ar.length - 1]); //Winter
+
+      ar[ar.length] = 'aaa'
+      console.log(ar)
+
+      ar.length=0;
+      console.log(ar)
+
+
+      var ar  = [[1,2],[3,4]]
+      console.log(ar[0][0])
+      console.log(ar[0][1])
+      console.log(ar[1][0])
+      console.log(ar[1][1])
+      
+    </script>
+  </body>
+</html>

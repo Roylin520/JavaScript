@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+</head>
+<body>
+  <input type="button" id="btn1" value="Click" />
+  <script>   
+    document.getElementById("btn1").addEventListener("click", function () {
+      var pid =  setInterval(function () {
+        var t = new Date().toString();
+        console.log(t); 
+      }, 1000);
+
+      clearInterval(pid)
+      console.log('finish')
+    })
+  </script>
+</body>
+</html>

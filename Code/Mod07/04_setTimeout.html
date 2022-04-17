@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+</head>
+<body>
+  <input type="button" id="btn1" value="Click" />
+  <script>
+    var win;
+    document.getElementById("btn1").addEventListener("click", function () {
+      var id = setTimeout(function (s,s2) {
+        var t = new Date().toString() + s + s2;
+        alert(t);
+      }, 2000,'mary','candy');
+
+
+     // clearTimeout(id)
+      console.log('finish')
+    })
+  </script>
+</body>
+</html>

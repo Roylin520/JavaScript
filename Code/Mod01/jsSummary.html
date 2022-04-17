@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        alert(`我是JavaScript程式碼放置於head`);
+    </script>
+    <!-- 可以確保在需要使用指令碼之前，它已經被載入了 -->
+</head>
+
+<body>
+    <div> 使用JavaScript範例 </div>
+    <script>
+        alert(`我是JavaScript程式放置於body`);
+    </script>
+    <!-- 將為避免 JavaScript 程式碼操作 HTML 元素時，HTML 元素還未載入而報錯（物件不存在）-->
+
+    <script src="JavaScript.js"> </script>
+    <!-- 使用外部js檔案 -->
+
+    <script src="http://127.0.0.1:5500/JavaScript.js"> </script>
+    <!-- 使用Server js檔案 -->
+</body>
+
+</html>
